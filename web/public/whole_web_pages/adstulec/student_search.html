@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>SARMS - Admin (Student search)</title>
+    <link rel="shortcut icon" href="./images/Title.jpg" type="image/x-icon" />
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<!-- About -->
+	<div id="about" class="section md-padding">
+
+	<!-- contact form -->
+		
+	<div class="limiter">
+		<div class="container-table100">					
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						
+						<table>
+							<thead>
+								<tr class="row100 head">										
+									<th class="cell100 column1">Name</th>
+									<th class="cell100 column2">Username</th>
+									<th class="cell100 column3">ID</th>
+									<th class="cell100 column4">Type</th>
+									<th class="cell100 column5">Email</th>
+									<th class="cell100 column5">Password</th>
+								</tr>									
+							</thead>
+						</table>
+					</div>	
+							<div class="table100-body js-pscroll">
+									<table id="stddata">
+										<tbody></tbody>
+									</table>
+							</div>							
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- jQuery Plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="../../app.js"></script>
+</body>
+
+</html>
+
+
+<script>
+function search(){
+    const input = $('#instudentdetails').val();    
+    console.log(input);
+    console.log("1234567890");
+    $.post(`${API_URL}/searchstudents`, {input}).then((response) =>{
+        console.log('2');
+        if (response.success) {
+			response.forEach((user) => {
+						console.log(user.ID);
+					
+					$('#userdata tbody').append(`
+						<tr class="row100 body">
+							<td class="cell100 column1">${user.name}</td>
+							<td class="cell100 column2">${user.username}</td>
+							<td class="cell100 column3">${user.ID}</td>
+							<td class="cell100 column4">Student</td>
+							<td class="cell100 column5">${user.email}</td>
+							<td class="cell100 column5">${user.password}</td>
+						</tr>`				
+						);
+					});
+			
+			
+			/*console.log("hehehehe");
+            console.log(response.name);
+           
+            $('#stddata tbody').append(`
+            <tr class="row100 body">
+                <td class="cell100 column1">${response.name}</td>
+                <td class="cell100 column2">${response.username}</td>
+                <td class="cell100 column3">${response.ID}</td>
+                <td class="cell100 column4">Student</td>
+                <td class="cell100 column5">${response.email}</td>
+                <td class="cell100 column5">${response.password}</td>
+            </tr>`				
+            );*/
+           
+        } 
+        else {
+            $('#messege').append(`<p class="alert alert-danger">${response}</p>`);
+            console.log($,{response});
+		}
+	
+    });
+
+}
+</script>

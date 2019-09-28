@@ -1,0 +1,56 @@
+/**********************donut ring*/
+
+.donut-ring {
+    position: absolute;    
+    width: 300px;
+    height: 300px;
+}
+.ring {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+}
+.ring.purple {
+    top: 0;
+    left: 0;
+    background-color: green;
+    border-radius: 100% 0 0 0;
+}
+.ring.blue {
+    top: 0;
+    right: 0;
+    background-color: green;
+    border-radius: 0 100% 0 0;
+}
+.ring.orange {
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    border-radius: 0 0 0 100%;
+}
+.ring.green {
+    bottom: 0;
+    right: 0;
+    background-color: green;
+    border-radius: 0 0 100% 0;
+}
+.ring.red {
+    top: 0;
+    right: 0;
+    background-color:#fa4251;
+    border-radius: 100% 0 0 0;
+}
+.cutout {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#ring {
+    transform: rotate(45deg);
+  }

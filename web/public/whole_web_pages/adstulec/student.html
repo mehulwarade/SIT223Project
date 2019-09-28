@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>LogistiX - client</title>
+    <link rel="shortcut icon" href="./images/Title.jpg" type="image/x-icon" />
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<!-- About -->
+	<div id="about" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section header -->
+				<div class="section-header text-center">
+						<h2 class="title">Welcome <d id="nameshow"></d></h2>
+						<h4 class="title">(ID: <d id="idshow"></d>)</h4>
+					<p class="black-text">This is your own personalized space and can be used for various different functions.
+						</p>
+						<p class="black-text">Please choose one of the following.
+							</p>
+				</div>
+				<!-- /Section header -->
+
+				<!-- about -->
+				<a href="./underconst.html">
+						<div class="col-md-4">							
+							<div class="about">
+								<i class="fa fa-book"></i>
+								<h3>My Assets</h3>
+								<p>Add/ Edit your asset details.<br> Update status. <br>Report a fault. <br>Etc.</p>
+
+								<br>							
+							</div>
+						</div>
+					</a>
+				<!-- /about -->
+
+				<!-- about -->
+				<a href="./underconst.html">
+						<div class="col-md-4">							
+							<div class="about">
+								<i class="fa fa-line-chart"></i>
+								<h3>Track assets</h3>
+								<p>Track your current asset location and status.</p><br><br>							
+							</div>
+						</div>
+					</a>
+				<!-- /about -->
+	
+				<!-- about -->
+				<a href="../../homepage.html">
+						<div class="col-md-4">							
+							<div class="about">
+								<i class="fa fa-sign-out"></i>
+								<h3>Sign Out</h3>
+								<p>Return to the login page.</p><br><br>
+								<br>						
+							</div>
+						</div>
+					</a>
+				<!-- /about -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /About -->
+
+
+	<!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark">
+		<!-- Container -->
+		<div class="container">
+			<!-- Row -->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- footer copyright -->
+					<div class="footer-copyright">
+						<p>Copyright © mjsx (2019). Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+					</div>
+					<!-- /footer copyright -->
+				</div>
+			</div>
+			<!-- /Row -->
+		</div>
+		<!-- /Container -->
+	</footer>
+	<!-- /Footer -->
+
+	<!-- Preloader -->
+	<div id="preloader">
+		<div class="preloader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<!-- /Preloader -->
+
+	<!-- jQuery Plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="../../app.js"></script>
+</body>
+
+</html>
+<script>
+		const id = localStorage.getItem('ID');
+		const curruser = localStorage.getItem('user');
+		
+		document.getElementById('idshow').innerHTML = `${id}`;
+		document.getElementById('nameshow').innerHTML = `${curruser}`;
+		
+				   
+		
+		</script>

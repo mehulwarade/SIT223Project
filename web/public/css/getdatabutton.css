@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand+SC);
+* {
+  box-sizing: border-box;
+}
+
+
+html section, body section {
+  display: flex;
+  justify-content: center;
+}
+html section button, body section button {
+  align-self: center;
+  background: transparent;
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  transition: all .5s ease;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  
+}
+html section button:hover, body section button:hover {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+html section button.lined.thin, body section button.lined.thin {
+  border: solid 2px #41403E;
+}
+
+@media (max-width: 620px) {
+  body h1 {
+    margin-top: 2rem;
+  }
+  body section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  body section button {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+}

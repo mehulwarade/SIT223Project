@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Student At Risk Monitoring System",
+  "main": "nodemon api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -r dotenv/config api.js",
+    "deploy": "now remove mjsx -y && now -p && now alias"
+  },
+  "author": "mjsx",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.2.5",
+    "mongoose": "^5.2.13",
+    "nodemon": "^1.18.4",
+    "now": "^15.3.0"
+  }
+}
